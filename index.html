@@ -1,88 +1,465 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julio César Magaña Cáceres</title>
+
+    <title>Julio César Magaña Cáceres | Mathematician & Data Scientist</title>
+
+    <meta name="description"
+          content="Personal academic and professional website of Julio César Magaña Cáceres. Mathematics, research, statistics and data science.">
+
     <style>
+        :root {
+            --navy: #14283f;
+            --blue: #315b80;
+            --accent: #5c91b9;
+            --light: #f5f7fa;
+            --text: #283746;
+            --muted: #667788;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--light);
+            color: var(--text);
             line-height: 1.7;
-            color: #263238;
-            background: #f5f7fa;
         }
 
-        header {
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--blue);
+        }
+
+        /* Navigation */
+
+        nav {
+            background: var(--navy);
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* Hero */
+
+        .hero {
+            background: var(--navy);
+            color: white;
+            padding: 110px 10%;
             text-align: center;
-            padding: 40px 0;
         }
 
-        h1 { color: #17365d; }
+        .hero .subtitle {
+            color: #a9c7df;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #d6e1eb;
+            font-size: 1.1rem;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 11px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: var(--navy);
+        }
+
+        .btn-outline {
+            border: 1px solid white;
+            color: white;
+        }
+
+        /* Main content */
+
+        main {
+            max-width: 1050px;
+            margin: auto;
+            padding: 50px 25px;
+        }
+
+        section {
+            margin-bottom: 75px;
+            scroll-margin-top: 25px;
+        }
 
         h2 {
-            color: #24527a;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 8px;
+            color: var(--navy);
+            font-size: 1.8rem;
+            margin-bottom: 22px;
         }
 
-        a { color: #1769aa; }
-        section { margin: 35px 0; }
+        .section-intro {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        /* Cards */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            border-top: 3px solid var(--accent);
+        }
+
+        .card h3 {
+            color: var(--blue);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Skills */
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #e2ebf3;
+            color: var(--navy);
+            padding: 7px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+
+        footer {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            color: #bdcbd8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                justify-content: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 75px 6%;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<header>
+<!-- Navigation -->
+
+<nav>
+    <div class="logo">JCM.</div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#data-science">Data Science</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero section -->
+
+<header class="hero">
+    <div class="subtitle">
+        Mathematics · Statistics · Data Science
+    </div>
+
     <h1>Julio César Magaña Cáceres</h1>
-    <p>Doctor en Matemáticas | Data Science | Finanzas</p>
-    <p>Mérida, Yucatán, México</p>
+
+    <p>
+        Ph.D. in Mathematics | Researcher | Data Science Enthusiast
+    </p>
+
+    <p style="margin-top: 20px;">
+        Exploring mathematical structures, statistical methods
+        and computational tools to understand complex problems.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">Explore my work</a>
+
+        <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
 </header>
 
-<section>
-    <h2>Acerca de mí</h2>
-    <p>
-        Doctor en Matemáticas, especializado en geometría
-        compleja y superficies de Riemann. Actualmente,
-        interesado en ciencia de datos, estadística
-        computacional y aplicaciones matemáticas en finanzas.
-    </p>
-</section>
+<main>
 
-<section>
-    <h2>Investigación</h2>
-    <p>
-        Mis intereses incluyen geometría diferencial,
-        geometría compleja, espacios de módulos
-        y sistemas dinámicos.
-    </p>
-</section>
+    <!-- About -->
 
-<section>
-    <h2>Data Science</h2>
-    <ul>
-        <li>Programación estadística en R.</li>
-        <li>Análisis de datos financieros.</li>
-        <li>Modelos estadísticos y econométricos.</li>
-        <li>Desarrollo de aplicaciones Shiny.</li>
-    </ul>
-</section>
+    <section id="about">
+        <h2>About Me</h2>
 
-<section>
-    <h2>Proyectos</h2>
-    <p>
-        <a href="https://github.com/McJul1o-R">
-            Mi perfil de GitHub
-        </a>
-    </p>
-</section>
+        <p>
+            I hold a Ph.D. in Mathematics, with a specialization
+            in Riemann surfaces and complex geometry.
+            My academic background includes differential geometry,
+            moduli spaces and mathematical structures.
+        </p>
 
-<section>
-    <h2>Contacto</h2>
-    <p>Correo electrónico: tu_correo@ejemplo.com</p>
-</section>
+        <p style="margin-top: 15px;">
+            In recent years, I have expanded my interests toward
+            data science and statistical computing, particularly
+            using R and RStudio. I am interested in connecting
+            mathematical theory with computational methods
+            and applications in finance.
+        </p>
+    </section>
+
+    <!-- Research -->
+
+    <section id="research">
+        <h2>Research Interests</h2>
+
+        <p class="section-intro">
+            My mathematical interests focus on geometry,
+            mathematical structures and dynamical systems.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Complex Geometry</h3>
+                <p>
+                    Complex manifolds, meromorphic differential
+                    forms and Riemann surfaces.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Moduli Spaces</h3>
+                <p>
+                    Geometric classification problems,
+                    group actions and quotient spaces.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dynamical Systems</h3>
+                <p>
+                    Mathematical structures and geometric
+                    approaches to dynamical systems.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Data Science -->
+
+    <section id="data-science">
+        <h2>Data Science & Quantitative Finance</h2>
+
+        <p class="section-intro">
+            Applying mathematical and statistical knowledge
+            to computational and financial problems.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Statistical Computing</h3>
+                <p>
+                    Statistical analysis, probability distributions,
+                    estimation methods and data visualization.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Financial Data Analysis</h3>
+                <p>
+                    Financial markets, time series analysis,
+                    portfolio analysis and quantitative methods.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Computational Tools</h3>
+                <p>
+                    Development of interactive applications,
+                    automated reports and reproducible analysis.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills -->
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+
+        <div class="tags">
+            <span class="tag">R</span>
+            <span class="tag">RStudio</span>
+            <span class="tag">Shiny</span>
+            <span class="tag">Statistics</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Quantitative Finance</span>
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">LaTeX</span>
+            <span class="tag">Python</span>
+        </div>
+    </section>
+
+    <!-- Projects -->
+
+    <section id="projects">
+        <h2>Selected Projects</h2>
+
+        <p class="section-intro">
+            Computational projects and applications
+            related to mathematics, statistics and finance.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Financial Data Analysis</h3>
+                <p>
+                    R-based tools for financial data analysis,
+                    stock market indicators and visualization.
+                </p>
+                <p style="margin-top: 15px;">
+                    <a href="https://github.com/McJul1o-R/Analisis-Datos-Acciones"
+                       target="_blank">
+                        View on GitHub →
+                    </a>
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Statistical Applications</h3>
+                <p>
+                    Interactive applications and computational
+                    resources for statistical analysis and learning.
+                </p>
+                <p style="margin-top: 15px;">
+                    <a href="https://github.com/McJul1o-R"
+                       target="_blank">
+                        Explore repositories →
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <p>
+            I am interested in research collaborations,
+            data science projects and professional opportunities.
+        </p>
+
+        <p style="margin-top: 15px;">
+            GitHub:
+            <a href="https://github.com/McJul1o-R" target="_blank">
+                github.com/McJul1o-R
+            </a>
+        </p>
+
+        <p>
+            Email: YOUR_EMAIL_HERE
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Julio César Magaña Cáceres</p>
+    <p>Mathematics · Research · Data Science</p>
+</footer>
 
 </body>
 </html>
