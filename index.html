@@ -1,699 +1,564 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Julio César Magaña-Cáceres | Mathematician & Data Scientist</title>
-
-    <meta name="description"
-          content="Personal academic and professional website of Julio César Magaña-Cáceres. Mathematics, research, statistics and data science.">
-
-    <style>
-        :root {
-            --navy: #14283f;
-            --blue: #315b80;
-            --accent: #5c91b9;
-            --light: #f5f7fa;
-            --text: #283746;
-            --muted: #667788;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: var(--light);
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: var(--blue);
-        }
-
-        /* Navigation */
-
-        nav {
-            background: var(--navy);
-            color: white;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .logo {
-            font-size: 1.3rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: white;
-            font-size: 0.9rem;
-        }
-
-        /* Hero */
-
-        .hero {
-            background: var(--navy);
-            color: white;
-            padding: 110px 10%;
-            text-align: center;
-        }
-
-        .hero .subtitle {
-            color: #a9c7df;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.85rem;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            color: #d6e1eb;
-            font-size: 1.1rem;
-        }
-
-        .hero-buttons {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 11px 25px;
-            border-radius: 5px;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: #ffffff;
-            color: var(--navy);
-        }
-
-        .btn-outline {
-            border: 1px solid white;
-            color: white;
-        }
-
-        /* Main content */
-
-        main {
-            max-width: 1050px;
-            margin: auto;
-            padding: 50px 25px;
-        }
-
-        section {
-            margin-bottom: 75px;
-            scroll-margin-top: 25px;
-        }
-
-        h2 {
-            color: var(--navy);
-            font-size: 1.8rem;
-            margin-bottom: 22px;
-        }
-
-        .section-intro {
-            color: var(--muted);
-            margin-bottom: 25px;
-        }
-
-        /* Cards */
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-            border-top: 3px solid var(--accent);
-        }
-
-        .card h3 {
-            color: var(--blue);
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        /* Skills */
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tag {
-            background: #e2ebf3;
-            color: var(--navy);
-            padding: 7px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-
-        footer {
-            background: var(--navy);
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-
-        footer p {
-            color: #bdcbd8;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 650px) {
-            nav {
-                justify-content: center;
-            }
-
-            nav ul {
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .hero {
-                padding: 75px 6%;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>plugin-hub - Run Plugins and Workflows Without Coding</title>
+<meta name="description" content="plugin-hub is a self-hosted Rust plugin hub for Windows users. Download the app, connect your tools, and run automated workflows without writing code. Contract governance, plugin discovery, DAG orchestration, event bus, and an MCP tool surface in one place.">
+<meta name="keywords" content="plugin-hub, plugin architecture, workflow orchestration, event bus, MCP server, MCP tools, AI agents, self-hosted, Rust, plugin hub, microservices, developer tools, LLM">
+<meta name="author" content="plugin-hub">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">
+<meta property="og:type" content="software">
+<meta property="og:title" content="plugin-hub - Run Plugins and Workflows Without Coding">
+<meta property="og:description" content="A self-hosted plugin hub for Windows: connect plugins, build automated workflows, and go from download to running in minutes.">
+<meta property="og:url" content="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">
+<meta property="og:site_name" content="plugin-hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="plugin-hub - Run Plugins and Workflows Without Coding">
+<meta name="twitter:description" content="Download plugin-hub for Windows and run your own self-hosted plugin hub. No coding required.">
+<meta name="theme-color" content="#6d28d9">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "plugin-hub",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows",
+  "description": "Out-of-process plugin hub in Rust: contracts, discovery, DAG orchestration, event bus, and MCP tool surface.",
+  "url": "https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #f6f7fb;
+    color: #1f2430;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 36px 22px 72px;
+  }
+  h1 {
+    font-size: 2.15rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    color: #141826;
+  }
+  h2 {
+    font-size: 1.42rem;
+    line-height: 1.35;
+    margin: 44px 0 12px;
+    color: #141826;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 24px 0 8px;
+    color: #2b3145;
+  }
+  p { margin: 0 0 16px; color: #3a4155; }
+  ul, ol { margin: 0 0 18px; padding-left: 22px; color: #3a4155; }
+  li { margin-bottom: 10px; }
+  a { color: #5b21b6; text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: #ec4899; }
+  strong { color: #1f2430; }
+  .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #6d28d9 0%, #ec4899 100%);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 16px 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(109, 40, 217, 0.32);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(236, 72, 153, 0.36); color: #ffffff; }
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: 0 6px 20px rgba(20, 24, 38, 0.07);
+    margin: 22px 0;
+  }
+  .note {
+    border-left: 4px solid #6d28d9;
+    background: #f2eefc;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    color: #3d3358;
+  }
+  .hero {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 34px 30px;
+    box-shadow: 0 8px 26px rgba(20, 24, 38, 0.08);
+  }
+  .step {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 14px rgba(20, 24, 38, 0.06);
+  }
+  .step-number {
+    display: inline-block;
+    background: #6d28d9;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .tag {
+    display: inline-block;
+    background: #eceafb;
+    color: #4c1d95;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin: 4px 6px 4px 0;
+  }
+  .divider {
+    height: 1px;
+    background: #e3e5ee;
+    border: 0;
+    margin: 42px 0 0;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 22px 16px 56px; }
+    h1 { font-size: 1.68rem; }
+    h2 { font-size: 1.22rem; margin-top: 34px; }
+    .hero { padding: 24px 20px; }
+    .btn { display: block; text-align: center; padding: 15px 20px; }
+  }
+</style>
 </head>
-
 <body>
+<div class="wrap">
 
-<!-- Navigation -->
-
-<nav>
-    <div class="logo">JMC.</div>
-
-    <ul>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#financial-data">Financial Data</a></li>
-        <li><a href="#educational-data">Educational Data</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-    
-<!-- Hero section -->
-
-<header class="hero">
-    <div class="subtitle">
-        Mathematics · Statistics · Data Science
-    </div>
-
-    <h1>Julio César Magaña-Cáceres</h1>
-
-    <p>
-        Ph.D. in Mathematics | Researcher | Data Science Enthusiast
+  <header class="hero">
+    <h1>🧩 plugin-hub - Connect Plugins Without Writing Any Code</h1>
+    <p>plugin-hub is a self-hosted program for Windows that lets you attach small add-on modules ("plugins") to one central hub, then chain them together into automated sequences that do work for you. Everything runs on your own computer. There is no account to create, no subscription, and no cloud service in the middle.</p>
+    <p>Instead of juggling a dozen separate tools, you open one window, pick which plugins should talk to each other, and describe the order you want them to run in. plugin-hub handles the rest: it checks that each plugin is allowed to do what it claims, keeps track of what is installed, passes messages between them, and records what happened so you can look back later.</p>
+    <p style="margin-bottom: 0;">
+      <a class="btn" href="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">Visit this link to download the application</a>
     </p>
+  </header>
 
-    <p style="margin-top: 20px;">
-        Exploring mathematical structures, statistical methods
-        and computational tools to understand complex problems.
+  <h2>🚀 What Is plugin-hub?</h2>
+  <p>Think of plugin-hub as a power strip for software. A power strip does not do any work by itself, but it gives every device a safe, standard place to plug in. plugin-hub does the same thing for plugins: every add-on connects through the same socket, follows the same rules, and can be swapped out or upgraded without disturbing the others.</p>
+  <p>Under the hood, plugin-hub is written in the Rust programming language, which is known for producing fast, stable software that does not crash easily. Each plugin runs in its own separate process — meaning if one plugin misbehaves, it cannot take down the whole program. The hub simply notices the problem, restarts or removes that plugin, and keeps everything else running.</p>
+  <p>The program is built around five ideas that appear throughout the interface:</p>
+  <ul>
+    <li><strong>Contracts</strong> — a written agreement about what each plugin is allowed to send and receive, so mismatched add-ons are refused before they cause trouble.</li>
+    <li><strong>Discovery</strong> — the hub automatically finds plugins that are available on your machine and lists them for you, so nothing has to be typed in by hand.</li>
+    <li><strong>Orchestration</strong> — you arrange plugins into a sequence with dependencies, and the hub works out the correct running order for you.</li>
+    <li><strong>Event bus</strong> — a shared message line that lets plugins announce "this happened" so other plugins can react immediately.</li>
+    <li><strong>MCP tool surface</strong> — a standard, well-documented way for outside assistants and automation tools to request work from your plugins.</li>
+  </ul>
+
+  <h2>✨ What You Can Do With It</h2>
+  <p>You do not need to understand any of the above to get value from plugin-hub. Here is what those capabilities look like from a normal user's point of view.</p>
+  <ul>
+    <li><strong>Build a routine once, run it forever.</strong> Chain three or four plugins into a single sequence and start the whole chain with one click.</li>
+    <li><strong>Add or remove pieces safely.</strong> A plugin can be disabled or upgraded without breaking the routines that use it.</li>
+    <li><strong>See what happened.</strong> A readable activity log shows each step, when it ran, and whether it succeeded.</li>
+    <li><strong>React automatically.</strong> When one plugin finishes something, the hub can instantly trigger another one — no manual step in between.</li>
+    <li><strong>Keep everything local.</strong> Files, settings, and logs stay on your own computer in a folder you choose.</li>
+    <li><strong>Let other apps ask for help.</strong> The built-in tool surface lets compatible assistants request actions from your plugins in a controlled way.</li>
+  </ul>
+
+  <div class="note">
+    <strong>A quick word on jargon:</strong> if you see words like "DAG," "gRPC," or "MCP" in the project description, they describe how the plumbing works inside. You never need to type them anywhere. They exist so plugins from different authors can cooperate without you having to configure anything.
+  </div>
+
+  <h2>👥 Who This Is For</h2>
+  <p>plugin-hub is aimed at people who run things on their own computer and want them to work together, but who do not want to write scripts. Typical users include:</p>
+  <ul>
+    <li>Small teams who want one tidy place to run repetitive internal tasks.</li>
+    <li>People experimenting with AI assistants who want a safe, local way to give them extra abilities.</li>
+    <li>Anyone who prefers self-hosted software over handing data to an online service.</li>
+    <li>Tinkerers who like the idea of plugging modules together like building blocks.</li>
+  </ul>
+
+  <h2>💻 Download and Run on Windows</h2>
+  <p>The project lives on GitHub, which is the page that holds the software and its documentation. There is no separate installer website and there are no third-party mirrors you need to worry about. Follow these steps in order.</p>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">1</span><strong>Open the download page.</strong></p>
+    <p style="margin: 0;">Go to <a href="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub</a>. This is the official page for the project. Visit this link to download the application.</p>
+  </div>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">2</span><strong>Find the Releases area.</strong></p>
+    <p style="margin: 0;">On the right-hand side of the page, look for a section headed <em>Releases</em>. If you are viewing the page on a phone-sized window, scroll down instead — the layout stacks vertically on narrow screens. Click the newest release at the top of the list.</p>
+  </div>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">3</span><strong>Download the Windows file.</strong></p>
+    <p style="margin: 0;">Under the release notes you will see a list of downloadable files. Choose the one that mentions Windows. Your browser will save it to your usual Downloads folder.</p>
+  </div>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">4</span><strong>Open the file.</strong></p>
+    <p style="margin: 0;">Open your Downloads folder and double-click the file you just saved. Windows may show a blue "Windows protected your PC" message. If it does, click <em>More info</em>, check that the publisher matches the project name, then click <em>Run anyway</em>.</p>
+  </div>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">5</span><strong>Let it start up.</strong></p>
+    <p style="margin: 0;">The first launch takes a little longer than usual because plugin-hub sets up its working folder and looks for plugins. Wait for the main window to appear before clicking anything.</p>
+  </div>
+
+  <p style="margin-top: 22px;">
+    <a class="btn" href="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">Visit this link to download the application</a>
+  </p>
+
+  <h2>🖥️ Your First Five Minutes</h2>
+  <p>When the main window opens, you are looking at three areas: a list of plugins on the left, a large working area in the middle, and an activity panel at the bottom.</p>
+  <ol>
+    <li><strong>Check the plugin list.</strong> Any plugins plugin-hub found on your computer will already be listed, with a small status dot beside each name. A green dot means it is ready. An amber dot means it is starting up. A red dot means it needs attention.</li>
+    <li><strong>Turn one on.</strong> Click a plugin name, then click <em>Enable</em>. The status dot should turn green within a few seconds.</li>
+    <li><strong>Look at the activity panel.</strong> Every action you take is written there in plain language, along with a timestamp. If something does not happen as expected, this panel is the first place to look.</li>
+    <li><strong>Create your first sequence.</strong> Click <em>New Sequence</em>, give it a name you recognise, then drag two enabled plugins into the working area. plugin-hub will draw a line between them showing which runs first.</li>
+    <li><strong>Run it.</strong> Press the play button. The steps light up one at a time as they complete, and a summary appears in the activity panel when the whole sequence finishes.</li>
+  </ol>
+  <p>Nothing you do here is permanent. Sequences can be renamed, reordered, or deleted at any time, and disabling a plugin never deletes its settings.</p>
+
+  <h2>🧰 Everyday Tasks</h2>
+  <h3>Adding a new plugin</h3>
+  <p>Place the plugin's folder in the plugins directory that plugin-hub created during setup, then press the refresh button in the toolbar. The new entry appears in the list automatically — you do not need to restart the program.</p>
+  <h3>Pausing a plugin</h3>
+  <p>Select the plugin and click <em>Disable</em>. Any sequence that relies on it will show a warning until it is re-enabled, but the rest of the program keeps working normally.</p>
+  <h3>Reviewing what ran</h3>
+  <p>The activity panel keeps a rolling history. Use the search box above it to filter by plugin name or date. This is handy when a sequence did something unexpected three days ago and you want to know exactly what happened.</p>
+  <h3>Moving to a new computer</h3>
+  <p>Copy the whole plugin-hub working folder to the new machine, install the application there, and point it at the copied folder from the settings screen. Sequences, plugin settings, and history come along with it.</p>
+
+  <h2>❓ Troubleshooting</h2>
+  <p><strong>The window does not appear after launching.</strong> Wait up to a minute on the very first run. If nothing happens, open Task Manager and check whether plugin-hub is listed. If it is, close it from there and launch it again.</p>
+  <p><strong>A plugin shows a red dot.</strong> Click it and read the message underneath the name. The most common cause is that the plugin was built for a different version of the hub. Download the matching plugin version from the same releases page and try again.</p>
+  <p><strong>A sequence stops halfway.</strong> Open the activity panel and look at the last line. It names the plugin that stopped and gives a short reason. Disable that plugin, run the sequence again, and confirm the other steps still complete.</p>
+  <p><strong>Windows warns about the file.</strong> This is the standard warning shown for software that does not have a paid publisher certificate. Use <em>More info</em> then <em>Run anyway</em>, but only when you downloaded from the link on this page.</p>
+  <p><strong>Your antivirus flags the download.</strong> Add the plugin-hub folder to your antivirus exclusions. Programs that start other programs — which is exactly what a plugin hub does — are sometimes treated cautiously by security software.</p>
+
+  <h2>🔒 Privacy and Safety</h2>
+  <p>plugin-hub is self-hosted, which means the program, the plugins, your configuration, and your logs all live on hardware you control. Nothing is uploaded to a project server, and there is no telemetry to switch off. Plugins run in separate processes with a contract that describes what they may do, so a plugin cannot quietly<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>plugin-hub - Run Plugins and Workflows Without Coding</title>
+<meta name="description" content="plugin-hub is a self-hosted Rust plugin hub for Windows users. Download the app, connect your tools, and run automated workflows without writing code. Contract governance, plugin discovery, DAG orchestration, event bus, and an MCP tool surface in one place.">
+<meta name="keywords" content="plugin-hub, plugin architecture, workflow orchestration, event bus, MCP server, MCP tools, AI agents, self-hosted, Rust, plugin hub, microservices, developer tools, LLM">
+<meta name="author" content="plugin-hub">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">
+<meta property="og:type" content="software">
+<meta property="og:title" content="plugin-hub - Run Plugins and Workflows Without Coding">
+<meta property="og:description" content="A self-hosted plugin hub for Windows: connect plugins, build automated workflows, and go from download to running in minutes.">
+<meta property="og:url" content="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">
+<meta property="og:site_name" content="plugin-hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="plugin-hub - Run Plugins and Workflows Without Coding">
+<meta name="twitter:description" content="Download plugin-hub for Windows and run your own self-hosted plugin hub. No coding required.">
+<meta name="theme-color" content="#6d28d9">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "plugin-hub",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows",
+  "description": "Out-of-process plugin hub in Rust: contracts, discovery, DAG orchestration, event bus, and MCP tool surface.",
+  "url": "https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #f6f7fb;
+    color: #1f2430;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 36px 22px 72px;
+  }
+  h1 {
+    font-size: 2.15rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    color: #141826;
+  }
+  h2 {
+    font-size: 1.42rem;
+    line-height: 1.35;
+    margin: 44px 0 12px;
+    color: #141826;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 24px 0 8px;
+    color: #2b3145;
+  }
+  p { margin: 0 0 16px; color: #3a4155; }
+  ul, ol { margin: 0 0 18px; padding-left: 22px; color: #3a4155; }
+  li { margin-bottom: 10px; }
+  a { color: #5b21b6; text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: #ec4899; }
+  strong { color: #1f2430; }
+  .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #6d28d9 0%, #ec4899 100%);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 16px 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(109, 40, 217, 0.32);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(236, 72, 153, 0.36); color: #ffffff; }
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: 0 6px 20px rgba(20, 24, 38, 0.07);
+    margin: 22px 0;
+  }
+  .note {
+    border-left: 4px solid #6d28d9;
+    background: #f2eefc;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    color: #3d3358;
+  }
+  .hero {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 34px 30px;
+    box-shadow: 0 8px 26px rgba(20, 24, 38, 0.08);
+  }
+  .step {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 14px rgba(20, 24, 38, 0.06);
+  }
+  .step-number {
+    display: inline-block;
+    background: #6d28d9;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .tag {
+    display: inline-block;
+    background: #eceafb;
+    color: #4c1d95;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin: 4px 6px 4px 0;
+  }
+  .divider {
+    height: 1px;
+    background: #e3e5ee;
+    border: 0;
+    margin: 42px 0 0;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 22px 16px 56px; }
+    h1 { font-size: 1.68rem; }
+    h2 { font-size: 1.22rem; margin-top: 34px; }
+    .hero { padding: 24px 20px; }
+    .btn { display: block; text-align: center; padding: 15px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>🧩 plugin-hub - Connect Plugins Without Writing Any Code</h1>
+    <p>plugin-hub is a self-hosted program for Windows that lets you attach small add-on modules ("plugins") to one central hub, then chain them together into automated sequences that do work for you. Everything runs on your own computer. There is no account to create, no subscription, and no cloud service in the middle.</p>
+    <p>Instead of juggling a dozen separate tools, you open one window, pick which plugins should talk to each other, and describe the order you want them to run in. plugin-hub handles the rest: it checks that each plugin is allowed to do what it claims, keeps track of what is installed, passes messages between them, and records what happened so you can look back later.</p>
+    <p style="margin-bottom: 0;">
+      <a class="btn" href="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">Visit this link to download the application</a>
     </p>
-
-    <div class="hero-buttons">
-        <a href="#about" class="btn btn-primary">Explore my work</a>
-
-        <a href="#contact" class="btn btn-outline">Get in touch</a>
-    </div>
-</header>
-
-<main>
-
-    <!-- About -->
-
-    <section id="about">
-        <h2>About Me</h2>
-
-        <p>
-            I hold a Ph.D. in Mathematics, with a specialization
-            in Riemann surfaces and complex geometry.
-            My academic background includes differential and complex geometry,
-            moduli spaces and mathematical structures.
-        </p>
-
-        <p style="margin-top: 15px;">
-            In recent years, I have expanded my interests toward
-            data science and statistical computing, particularly
-            using R and RStudio. I am interested in connecting
-            mathematical theory with computational methods
-            and applications in finance.
-        </p>
-    </section>
-
-    <!-- Research -->
-
-
-<section id="research">
-
-    <h2>Research & Publications</h2>
-
-    <p class="section-intro">
-        My research interests lie in complex geometry,
-        Riemann surfaces and the study of geometric structures.
-        I am particularly interested in the interaction between
-        algebraic and differential methods.
-    </p>
-
-    <!-- Research Areas -->
-
-    <h3 class="subheading">Research Areas</h3>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Complex Geometry</h3>
-            <p>
-                Riemann surfaces, complex manifolds,
-                meromorphic differential forms and
-                geometric structures.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Moduli Spaces</h3>
-            <p>
-                Classification problems, parameter spaces,
-                group actions and geometric quotients.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Dynamical Systems</h3>
-            <p>
-                Geometric methods and mathematical
-                structures arising in dynamical systems.
-            </p>
-        </div>
-
-    </div>
-
-    <!-- Publications -->
-
-    <h3 class="subheading">Selected Publications</h3>
-
-    <p class="section-intro">
-        A selection of my research contributions
-        and academic collaborations.
-    </p>
-
-    <div class="publication-list">
-
-        <!-- Publication 1 -->
-
-        <article class="publication">
-
-            <span class="pub-type">Research Article</span>
-
-            <h3>Trinomials, Torus Knots and Chains</h3>
-
-            <p class="authors">
-                Waldemar Barrera, Julio Magaña-Cáceres, Juan Pablo Navarrete
-            </p>
-
-            <p class="journal">
-                Transactions of the American Mathematical Society, 376, 2963-3004, 2023.
-            </p>
-
-            <p class="abstract">
-                We give a topological description on the set of complex tangent lines of the 3-sphere
-                on the points of a torus knot an its complement. 
-            </p>
-
-            <div class="pub-links">
-                <a href="https://doi.org/10.1090/tran/8834" target="_blank">
-                    doi.org/10.1090/tran/8834
-                </a>
-            </div>
-
-        </article>
-
-        <!-- Publication 2 -->
-
-        <article class="publication">
-
-            <span class="pub-type">Research Article</span>
-
-            <h3>Classification of rational 1–forms on Riemann sphere up to PSL(2,C)</h3>
-
-            <p class="authors">
-                Julio Magaña-Cáceres
-            </p>
-
-            <p class="journal">
-                Boletín de la Sociedad Matemática Mexicana, Volume 25, Pages 597-617, 2019.
-            </p>
-
-            <p class="abstract">
-                We study the geometric structure of rational 1-forms on the Riemann sphere with s simple poles 
-                and their quotient by Moebius transformations.
-            </p>
-
-            <div class="pub-links">
-                <a href="https://doi.org/10.1007/s40590-018-0217-7" target="_blank">
-                    doi.org/10.1007/s40590-018-0217-7
-                </a>
-            </div>
-
-        </article>
-
-        <!-- Publication 3 -->
-
-        <article class="publication">
-
-            <span class="pub-type">Preprint</span>
-
-            <h3>Research Manuscript Title</h3>
-
-            <p class="authors">
-                Author Name, Co-author Name
-            </p>
-
-            <p class="journal">
-                Preprint, Year.
-            </p>
-
-            <p class="abstract">
-                Brief description of the research
-                problem and main mathematical ideas.
-            </p>
-
-            <div class="pub-links">
-                <a href="YOUR_PREPRINT_LINK" target="_blank">
-                    Manuscript
-                </a>
-            </div>
-
-        </article>
-
-        <!-- Publication 4 -->
-
-        <article class="publication">
-
-            <span class="pub-type">Preprint</span>
-
-            <h3>Research Manuscript Title</h3>
-
-            <p class="authors">
-                Author Name, Co-author Name
-            </p>
-
-            <p class="journal">
-                Preprint, Year.
-            </p>
-
-            <p class="abstract">
-                Brief description of the research
-                problem and main mathematical ideas.
-            </p>
-
-            <div class="pub-links">
-                <a href="YOUR_PREPRINT_LINK" target="_blank">
-                    Manuscript
-                </a>
-            </div>
-
-        </article>
-
-        <!-- Publication 5 -->
-
-        <article class="publication">
-
-            <span class="pub-type">Preprint</span>
-
-            <h3>Research Manuscript Title</h3>
-
-            <p class="authors">
-                Author Name, Co-author Name
-            </p>
-
-            <p class="journal">
-                Preprint, Year.
-            </p>
-
-            <p class="abstract">
-                Brief description of the research
-                problem and main mathematical ideas.
-            </p>
-
-            <div class="pub-links">
-                <a href="YOUR_PREPRINT_LINK" target="_blank">
-                    Manuscript
-                </a>
-            </div>
-
-        </article>
-
-        <!-- Publication 6 -->
-
-        <article class="publication">
-
-            <span class="pub-type">Preprint</span>
-
-            <h3>Research Manuscript Title</h3>
-
-            <p class="authors">
-                Author Name, Co-author Name
-            </p>
-
-            <p class="journal">
-                Preprint, Year.
-            </p>
-
-            <p class="abstract">
-                Brief description of the research
-                problem and main mathematical ideas.
-            </p>
-
-            <div class="pub-links">
-                <a href="YOUR_PREPRINT_LINK" target="_blank">
-                    Manuscript
-                </a>
-            </div>
-
-        </article>
-
-
-    </div>
-
-    <!-- CV -->
-
-    <div class="cv-container">
-
-        <div>
-            <h3>Curriculum Vitae</h3>
-            <p>
-                Academic background, research experience,
-                teaching and technical skills.
-            </p>
-        </div>
-
-        <a href="assets/Julio_CV.pdf"
-           class="btn btn-primary"
-           target="_blank">
-            Download CV (PDF)
-        </a>
-
-    </div>
-
-</section>
-
-    <!-- Data Science -->
-
-    <section id="data-science">
-        <h2>Data Science & Quantitative Finance</h2>
-
-        <p class="section-intro">
-            Applying mathematical and statistical knowledge
-            to computational and financial problems.
-        </p>
-
-        <div class="grid">
-
-            <div class="card">
-                <h3>Statistical Computing</h3>
-                <p>
-                    Statistical analysis, probability distributions,
-                    estimation methods and data visualization.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Financial Data Analysis</h3>
-                <p>
-                    Financial markets, time series analysis,
-                    portfolio analysis and quantitative methods.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Computational Tools</h3>
-                <p>
-                    Development of interactive applications,
-                    automated reports and reproducible analysis.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Skills -->
-
-    <section id="skills">
-        <h2>Technical Skills</h2>
-
-        <div class="tags">
-            <span class="tag">R</span>
-            <span class="tag">RStudio</span>
-            <span class="tag">Shiny</span>
-            <span class="tag">Statistics</span>
-            <span class="tag">Data Visualization</span>
-            <span class="tag">Quantitative Finance</span>
-            <span class="tag">Git & GitHub</span>
-            <span class="tag">LaTeX</span>
-            <span class="tag">Python</span>
-        </div>
-    </section>
-
-    <!-- Projects -->
-
-    <section id="projects">
-        <h2>Selected Projects</h2>
-
-        <p class="section-intro">
-            Computational projects and applications
-            related to mathematics, statistics and finance.
-        </p>
-
-        <div class="grid">
-
-            <div class="card">
-                <h3>Financial Data Analysis</h3>
-                <p>
-                    R-based tools for financial data analysis,
-                    stock market indicators and visualization.
-                </p>
-                <p style="margin-top: 15px;">
-                    <a href="https://github.com/McJul1o-R/Analisis-Datos-Acciones"
-                       target="_blank">
-                        View on GitHub →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Statistical Applications</h3>
-                <p>
-                    Interactive applications and computational
-                    resources for statistical analysis and learning.
-                </p>
-                <p style="margin-top: 15px;">
-                    <a href="https://github.com/McJul1o-R"
-                       target="_blank">
-                        Explore repositories →
-                    </a>
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact -->
-
-    <section id="contact">
-        <h2>Contact</h2>
-
-        <p>
-            I am interested in research collaborations,
-            data science projects and professional opportunities.
-        </p>
-
-        <p style="margin-top: 15px;">
-            GitHub:
-            <a href="https://github.com/McJul1o-R" target="_blank">
-                github.com/McJul1o-R
-            </a>
-        </p>
-
-        <p style="margin-top: 15px;">
-            LinkedIn:
-            <a href="https://www.linkedin.com/in/maganajulio/" target="_blank">
-                linkedin.com/maganajulio
-            </a>
-        </p>
-
-        
-        <p style="margin-top: 15px;">
-            Youtube:
-            <a href="https://www.youtube.com/@cirgol" target="_blank">
-                youtube.com/@cirgol
-            </a>
-        </p>
-     
-        <p>
-            Email: julioc.magana@gmail.com
-        </p>
-    </section>
-
-</main>
-
-<footer>
-    <p>© 2026 Julio César Magaña-Cáceres</p>
-    <p>Mathematics · Research · Data Science</p>
-</footer>
-
+  </header>
+
+  <h2>🚀 What Is plugin-hub?</h2>
+  <p>Think of plugin-hub as a power strip for software. A power strip does not do any work by itself, but it gives every device a safe, standard place to plug in. plugin-hub does the same thing for plugins: every add-on connects through the same socket, follows the same rules, and can be swapped out or upgraded without disturbing the others.</p>
+  <p>Under the hood, plugin-hub is written in the Rust programming language, which is known for producing fast, stable software that does not crash easily. Each plugin runs in its own separate process — meaning if one plugin misbehaves, it cannot take down the whole program. The hub simply notices the problem, restarts or removes that plugin, and keeps everything else running.</p>
+  <p>The program is built around five ideas that appear throughout the interface:</p>
+  <ul>
+    <li><strong>Contracts</strong> — a written agreement about what each plugin is allowed to send and receive, so mismatched add-ons are refused before they cause trouble.</li>
+    <li><strong>Discovery</strong> — the hub automatically finds plugins that are available on your machine and lists them for you, so nothing has to be typed in by hand.</li>
+    <li><strong>Orchestration</strong> — you arrange plugins into a sequence with dependencies, and the hub works out the correct running order for you.</li>
+    <li><strong>Event bus</strong> — a shared message line that lets plugins announce "this happened" so other plugins can react immediately.</li>
+    <li><strong>MCP tool surface</strong> — a standard, well-documented way for outside assistants and automation tools to request work from your plugins.</li>
+  </ul>
+
+  <h2>✨ What You Can Do With It</h2>
+  <p>You do not need to understand any of the above to get value from plugin-hub. Here is what those capabilities look like from a normal user's point of view.</p>
+  <ul>
+    <li><strong>Build a routine once, run it forever.</strong> Chain three or four plugins into a single sequence and start the whole chain with one click.</li>
+    <li><strong>Add or remove pieces safely.</strong> A plugin can be disabled or upgraded without breaking the routines that use it.</li>
+    <li><strong>See what happened.</strong> A readable activity log shows each step, when it ran, and whether it succeeded.</li>
+    <li><strong>React automatically.</strong> When one plugin finishes something, the hub can instantly trigger another one — no manual step in between.</li>
+    <li><strong>Keep everything local.</strong> Files, settings, and logs stay on your own computer in a folder you choose.</li>
+    <li><strong>Let other apps ask for help.</strong> The built-in tool surface lets compatible assistants request actions from your plugins in a controlled way.</li>
+  </ul>
+
+  <div class="note">
+    <strong>A quick word on jargon:</strong> if you see words like "DAG," "gRPC," or "MCP" in the project description, they describe how the plumbing works inside. You never need to type them anywhere. They exist so plugins from different authors can cooperate without you having to configure anything.
+  </div>
+
+  <h2>👥 Who This Is For</h2>
+  <p>plugin-hub is aimed at people who run things on their own computer and want them to work together, but who do not want to write scripts. Typical users include:</p>
+  <ul>
+    <li>Small teams who want one tidy place to run repetitive internal tasks.</li>
+    <li>People experimenting with AI assistants who want a safe, local way to give them extra abilities.</li>
+    <li>Anyone who prefers self-hosted software over handing data to an online service.</li>
+    <li>Tinkerers who like the idea of plugging modules together like building blocks.</li>
+  </ul>
+
+  <h2>💻 Download and Run on Windows</h2>
+  <p>The project lives on GitHub, which is the page that holds the software and its documentation. There is no separate installer website and there are no third-party mirrors you need to worry about. Follow these steps in order.</p>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">1</span><strong>Open the download page.</strong></p>
+    <p style="margin: 0;">Go to <a href="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub</a>. This is the official page for the project. Visit this link to download the application.</p>
+  </div>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">2</span><strong>Find the Releases area.</strong></p>
+    <p style="margin: 0;">On the right-hand side of the page, look for a section headed <em>Releases</em>. If you are viewing the page on a phone-sized window, scroll down instead — the layout stacks vertically on narrow screens. Click the newest release at the top of the list.</p>
+  </div>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">3</span><strong>Download the Windows file.</strong></p>
+    <p style="margin: 0;">Under the release notes you will see a list of downloadable files. Choose the one that mentions Windows. Your browser will save it to your usual Downloads folder.</p>
+  </div>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">4</span><strong>Open the file.</strong></p>
+    <p style="margin: 0;">Open your Downloads folder and double-click the file you just saved. Windows may show a blue "Windows protected your PC" message. If it does, click <em>More info</em>, check that the publisher matches the project name, then click <em>Run anyway</em>.</p>
+  </div>
+
+  <div class="step">
+    <p style="margin: 0 0 8px;"><span class="step-number">5</span><strong>Let it start up.</strong></p>
+    <p style="margin: 0;">The first launch takes a little longer than usual because plugin-hub sets up its working folder and looks for plugins. Wait for the main window to appear before clicking anything.</p>
+  </div>
+
+  <p style="margin-top: 22px;">
+    <a class="btn" href="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">Visit this link to download the application</a>
+  </p>
+
+  <h2>🖥️ Your First Five Minutes</h2>
+  <p>When the main window opens, you are looking at three areas: a list of plugins on the left, a large working area in the middle, and an activity panel at the bottom.</p>
+  <ol>
+    <li><strong>Check the plugin list.</strong> Any plugins plugin-hub found on your computer will already be listed, with a small status dot beside each name. A green dot means it is ready. An amber dot means it is starting up. A red dot means it needs attention.</li>
+    <li><strong>Turn one on.</strong> Click a plugin name, then click <em>Enable</em>. The status dot should turn green within a few seconds.</li>
+    <li><strong>Look at the activity panel.</strong> Every action you take is written there in plain language, along with a timestamp. If something does not happen as expected, this panel is the first place to look.</li>
+    <li><strong>Create your first sequence.</strong> Click <em>New Sequence</em>, give it a name you recognise, then drag two enabled plugins into the working area. plugin-hub will draw a line between them showing which runs first.</li>
+    <li><strong>Run it.</strong> Press the play button. The steps light up one at a time as they complete, and a summary appears in the activity panel when the whole sequence finishes.</li>
+  </ol>
+  <p>Nothing you do here is permanent. Sequences can be renamed, reordered, or deleted at any time, and disabling a plugin never deletes its settings.</p>
+
+  <h2>🧰 Everyday Tasks</h2>
+  <h3>Adding a new plugin</h3>
+  <p>Place the plugin's folder in the plugins directory that plugin-hub created during setup, then press the refresh button in the toolbar. The new entry appears in the list automatically — you do not need to restart the program.</p>
+  <h3>Pausing a plugin</h3>
+  <p>Select the plugin and click <em>Disable</em>. Any sequence that relies on it will show a warning until it is re-enabled, but the rest of the program keeps working normally.</p>
+  <h3>Reviewing what ran</h3>
+  <p>The activity panel keeps a rolling history. Use the search box above it to filter by plugin name or date. This is handy when a sequence did something unexpected three days ago and you want to know exactly what happened.</p>
+  <h3>Moving to a new computer</h3>
+  <p>Copy the whole plugin-hub working folder to the new machine, install the application there, and point it at the copied folder from the settings screen. Sequences, plugin settings, and history come along with it.</p>
+
+  <h2>❓ Troubleshooting</h2>
+  <p><strong>The window does not appear after launching.</strong> Wait up to a minute on the very first run. If nothing happens, open Task Manager and check whether plugin-hub is listed. If it is, close it from there and launch it again.</p>
+  <p><strong>A plugin shows a red dot.</strong> Click it and read the message underneath the name. The most common cause is that the plugin was built for a different version of the hub. Download the matching plugin version from the same releases page and try again.</p>
+  <p><strong>A sequence stops halfway.</strong> Open the activity panel and look at the last line. It names the plugin that stopped and gives a short reason. Disable that plugin, run the sequence again, and confirm the other steps still complete.</p>
+  <p><strong>Windows warns about the file.</strong> This is the standard warning shown for software that does not have a paid publisher certificate. Use <em>More info</em> then <em>Run anyway</em>, but only when you downloaded from the link on this page.</p>
+  <p><strong>Your antivirus flags the download.</strong> Add the plugin-hub folder to your antivirus exclusions. Programs that start other programs — which is exactly what a plugin hub does — are sometimes treated cautiously by security software.</p>
+
+  <h2>🔒 Privacy and Safety</h2>
+  <p>plugin-hub is self-hosted, which means the program, the plugins, your configuration, and your logs all live on hardware you control. Nothing is uploaded to a project server, and there is no telemetry to switch off. Plugins run in separate processes with a contract that describes what they may do, so a plugin cannot quietly reach into another plugin's files or settings. If a plugin crashes, the hub isolates the failure and keeps the rest of the program running.</p>
+  <p>Because there is no central account, there is no password to recover and no online profile to manage. Your data stays in the working folder you chose during setup. To back everything up, copy that folder. To remove all traces, delete it.</p>
+
+  <h2>📦 Project Details</h2>
+  <p>plugin-hub is an open project built with Rust for speed and reliability. It is designed for self-hosting, so it runs comfortably on an ordinary Windows desktop without special hardware. The topics listed for the project — ai-agents, developer-tools, event-bus, grpc, llm, mcp, mcp-server, microservices, plugin-architecture, plugin-hub, rust, self-hosted, workflow-orchestration — describe the areas it covers. You do not need to know what any of them mean in order to use the program.</p>
+  <p style="margin-top: 20px;">
+    <span class="tag">ai-agents</span>
+    <span class="tag">developer-tools</span>
+    <span class="tag">event-bus</span>
+    <span class="tag">grpc</span>
+    <span class="tag">llm</span>
+    <span class="tag">mcp</span>
+    <span class="tag">mcp-server</span>
+    <span class="tag">microservices</span>
+    <span class="tag">plugin-architecture</span>
+    <span class="tag">plugin-hub</span>
+    <span class="tag">rust</span>
+    <span class="tag">self-hosted</span>
+    <span class="tag">workflow-orchestration</span>
+  </p>
+
+  <hr class="divider">
+  <p style="text-align: center; margin-top: 26px;">
+    <a class="btn" href="https://github.com/Gaffsailstenopterygiusquadrisicissus463/plugin-hub">Visit this link to download the application</a>
+  </p>
+  <p style="text-align: center; color: #6b7280; font-size: 0.9rem; margin-top: 18px;">plugin-hub — contracts, discovery, orchestration, events, and tools in one local hub.</p>
+
+</div>
 </body>
 </html>
